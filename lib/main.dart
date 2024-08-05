@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:second_design/views/dexef_one.dart';
-import 'package:second_design/views/main_view.dart';
+
 
 void main() {
   runApp(const DexefApp());
