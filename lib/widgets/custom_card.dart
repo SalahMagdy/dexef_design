@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:second_design/widgets/triangle_paint.dart';
 
-import 'free_trial_button.dart';
-// import 'package:flutter_svg/svg.dart';
-
 class CustomCard extends StatelessWidget {
   const  CustomCard(
       {super.key, required this.title,
         required this.description,
-        required this.function,
         this.data,
         required this.color,
-        required this.crossAxisAlignment
+        required this.crossAxisAlignment,
+        required this.content,
+        this.freeTrialButton, this.textButton
       });
   final String title;
   final String description;
-  final VoidCallback function ;
   final Widget? data;
   final Color color ;
   final CrossAxisAlignment crossAxisAlignment ;
+  final Widget content ;
+  final Widget? freeTrialButton ;
+  final Widget? textButton ;
 
   @override
   Widget build(BuildContext context) {
@@ -53,44 +53,20 @@ class CustomCard extends StatelessWidget {
                     fontSize: 12,
                     height: 2,
                     fontFamily: 'Dexef',
+                    color: Color(0xff274268)
                   ),
                 ),
                 const SizedBox(
                   height: 24,
                 ),
-                const Text(
-                  'Starting :',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'Dexef',
-                    color: Color(0xff929FB2),
-                  ),
-                ),
-                const Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(
-                      '15000',
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Color(0xff274268),
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      'EGP',
-                      style: TextStyle(
-                          fontSize: 12,
-                          color: Color(0xff274268),
-                          fontFamily: 'Dexef'),
-                    )
-                  ],
-                ),
+                content,
               ],
             ),
           ),
         ),
-
-        FreeTrailButton(function: function),
+        freeTrialButton==null? const Text('') : freeTrialButton!,
+        textButton==null? const Text('') : textButton!,
+        // FreeTrailButton(function: function),
         Positioned(
           top: 3,
           right: 3,
