@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:second_design/constants/constants.dart';
 import 'package:second_design/widgets/custom_app_bar.dart';
 import 'package:second_design/widgets/custom_card.dart';
 import '../widgets/drawer_list_view.dart';
 
 class DexefOne extends StatelessWidget {
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
 
   DexefOne({
     super.key,
@@ -15,9 +16,9 @@ class DexefOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: const Color(0xffF5F7FA),
+      backgroundColor: kPrimaryColor,
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
             CustomAppBar(

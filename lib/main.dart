@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:second_design/views/dexef_one.dart';
+import 'package:second_design/views/main_view.dart';
+import 'package:second_design/views/workspace_view.dart';
+
+import 'views/addons_view.dart';
 
 
 void main() {
@@ -14,7 +18,11 @@ class DexefApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
      debugShowCheckedModeBanner: false,
-      home:DexefOne(),
+      home:const WorkspaceView(),
+      routes: {
+       'AddonsView': (context) =>const AddonsView(),
+       'MainView': (context) => const MainView(),
+      },
     );
   }
 }

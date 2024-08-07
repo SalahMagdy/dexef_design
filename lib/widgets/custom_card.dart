@@ -9,7 +9,8 @@ class CustomCard extends StatelessWidget {
         required this.color,
         required this.crossAxisAlignment,
         required this.content,
-        this.freeTrialButton, this.textButton
+        this.freeTrialButton,
+        this.textButton
       });
   final String title;
   final String description;
@@ -29,6 +30,7 @@ class CustomCard extends StatelessWidget {
 
 
         Card(
+          clipBehavior: Clip.hardEdge,
 
           color: Colors.white,
           child: Padding(

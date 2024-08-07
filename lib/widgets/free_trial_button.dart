@@ -21,7 +21,6 @@ class FreeTrailButton extends StatelessWidget {
           height: 50,
           padding: const EdgeInsets.only(left: 30, top: 14),
           decoration: BoxDecoration(
-
               borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(16),
                   bottomRight: Radius.circular(16)),

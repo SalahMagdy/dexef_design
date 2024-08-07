@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../views/devices_view.dart';
+import '../views/dexef_one.dart';
 import '../views/main_view.dart';
+import '../views/workspace_view.dart';
 import 'custom_list_tile.dart';
 
 class DrawerListView extends StatelessWidget {
@@ -9,40 +12,41 @@ class DrawerListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [
-        CustomListTile(
+      children:   [
+        const CustomListTile(
+
             page: MainView(),
             image: 'assets/images/icon_dexef_one/home.svg',
             title: 'Home'),
-        CustomListTile(
-            page: MainView(),
+         CustomListTile(
+            page: DevicesView(),
             image: 'assets/images/icon_dexef_one/device.svg',
             title: 'Devices'),
-        CustomListTile(
-            page: MainView(),
+        const CustomListTile(
+            page: WorkspaceView(),
             image: 'assets/images/icon_dexef_one/workspace.svg',
             title: 'Workspace'),
-        CustomListTile(
+        const CustomListTile(
             page: MainView(),
             image: 'assets/images/icon_dexef_one/apps.svg',
             title: 'Apps'),
         CustomListTile(
-            page: MainView(),
+            page: DexefOne(),
             image: 'assets/images/icon_dexef_one/billing.svg',
             title: 'Billing'),
-        CustomListTile(
+        const CustomListTile(
             page: MainView(),
             image: 'assets/images/icon_dexef_one/account.svg',
             title: 'Account'),
-        CustomListTile(
+        const CustomListTile(
             page: MainView(),
             image: 'assets/images/icon_dexef_one/directory.svg',
             title: 'Directory'),
-        CustomListTile(
+        const CustomListTile(
             page: MainView(),
             image: 'assets/images/icon_dexef_one/security.svg',
             title: 'Security'),
-        CustomListTile(
+        const CustomListTile(
             page: MainView(),
             image: 'assets/images/icon_dexef_one/reporting.svg',
             title: 'Reporting'),

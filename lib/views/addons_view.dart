@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:second_design/constants/constants.dart';
 import 'package:second_design/widgets/custom_card.dart';
 import 'package:second_design/widgets/free_trial_button.dart';
 
 import '../widgets/custom_app_bar.dart';
 import '../widgets/custom_switch.dart';
+import '../widgets/drawer_list_view.dart';
 
 class AddonsView extends StatefulWidget {
   const AddonsView({super.key});
@@ -25,15 +27,19 @@ class AddonsView extends StatefulWidget {
 }
 
 class _AddonsViewState extends State<AddonsView> {
+  // GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF5F7FA),
+      key: scaffoldKey,
+      backgroundColor: kPrimaryColor,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 24, left: 30),
+          padding: const EdgeInsets.only(top: 24, left: 30,right: 30),
           child: Column(children: [
-            CustomAppBar(function: (){},),
+            CustomAppBar(function: (){
+              scaffoldKey.currentState?.openDrawer();
+            },),
             const Column(children: [
               SizedBox(
                 height: 64,
@@ -94,6 +100,7 @@ class _AddonsViewState extends State<AddonsView> {
               itemBuilder: (context, index) =>  CustomCard(
                 freeTrialButton: FreeTrailButton(function: (){}),
                 content:const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                      Text(
                       'Starting :',
@@ -136,6 +143,9 @@ class _AddonsViewState extends State<AddonsView> {
             )
           ]),
         ),
+      ),
+      drawer: const Drawer(
+        child: DrawerListView(),
       ),
     );
   }

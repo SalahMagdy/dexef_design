@@ -64,6 +64,8 @@ flutter:
   assets:
     - assets/images/
     - assets/images/icon_dexef_one/
+    - assets/images/icon_devices/
+    - assets/images/workspace_icons/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

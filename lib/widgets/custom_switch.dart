@@ -22,12 +22,8 @@ class _CustomSwitchState extends State<CustomSwitch> {
     return Switch(
 
       onChanged: (value) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => value ? const AddonsView() : const MainView(),
-          ),
-        );
+       value==true? Navigator.pushNamed(context,'AddonsView')
+           :Navigator.pushNamed(context,'MainView');
         setState(() {
 
         });
